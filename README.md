@@ -1,19 +1,11 @@
 # Gemini Chatbot API Project
 
 ## Deskripsi
-Proyek **Gemini Chatbot API Project** bertujuan untuk membuat aplikasi Node.js yang memanggil
-API Google Gemini.  
-Di dalamnya tersedia **4 endpoint** percobaan:
-
-1. **`/generate-text`** – menghasilkan teks dari prompt.
-2. **`/generate-from-image`** – menghasilkan teks/konten dari gambar.
-3. **`/generate-from-document`** – menghasilkan teks/konten dari dokumen.
-4. **`/generate-from-audio`** – menghasilkan teks/konten dari audio.
-5. **`/api/chat`** – mengirim dan menerima pesan chat secara interaktif dengan Gemini API.
+Proyek **Gemini Chatbot API Project** adalah aplikasi Node.js + Express yang memanfaatkan Google Gemini API untuk membuat chatbot cerdas berbasis web.
+Aplikasi ini menyediakan beberapa endpoint yang dapat digunakan untuk percobaan integrasi AI, baik untuk generasi teks maupun media lainnya.
 
 ## Tujuan
-Menyediakan contoh implementasi sederhana untuk memanggil berbagai layanan
-Google Gemini melalui API.
+Membangun chatbot cerdas yang dapat merespons percakapan pengguna secara real-time.
 
 ## Spesifikasi Kebutuhan
 - **Node.js**: versi terbaru (latest LTS atau Current).
@@ -52,8 +44,4 @@ http://localhost:3000/
 ### 6. Akses Endpoint
 | Endpoint             | Url                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| generate text | http://localhost:3000/generate-text |
-| generate from image | http://localhost:3000/generate-from-image |
-| generate from document | http://localhost:3000/generate-from-document |
-| generate from audio | http://localhost:3000/generate-from-audio |
 | chat | http://localhost:3000/api/chat |
