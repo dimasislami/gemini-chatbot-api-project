@@ -1,7 +1,7 @@
-# Gemini AI API Project
+# Gemini Chatbot API Project
 
 ## Deskripsi
-Proyek **Gemini AI API Project** bertujuan untuk membuat aplikasi Node.js yang memanggil
+Proyek **Gemini Chatbot API Project** bertujuan untuk membuat aplikasi Node.js yang memanggil
 API Google Gemini.  
 Di dalamnya tersedia **4 endpoint** percobaan:
 
@@ -9,6 +9,7 @@ Di dalamnya tersedia **4 endpoint** percobaan:
 2. **`/generate-from-image`** – menghasilkan teks/konten dari gambar.
 3. **`/generate-from-document`** – menghasilkan teks/konten dari dokumen.
 4. **`/generate-from-audio`** – menghasilkan teks/konten dari audio.
+5. **`/api/chat`** – mengirim dan menerima pesan chat secara interaktif dengan Gemini API.
 
 ## Tujuan
 Menyediakan contoh implementasi sederhana untuk memanggil berbagai layanan
@@ -23,8 +24,8 @@ Google Gemini melalui API.
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/username/gemini-ai-api-project.git
-cd gemini-ai-api-project
+git clone https://github.com/dimasislami/gemini-chatbot-api-project.git
+cd gemini-chatbot-api-project
 ```
 
 ### 2. Install Dependensi
@@ -34,6 +35,7 @@ npm install
 
 ### 3. Konfigurasi Environment
 ```bash
+cp .env.example .env
 GEMINI_API_KEY=masukkan_api_key_anda
 ```
 
@@ -41,3 +43,17 @@ GEMINI_API_KEY=masukkan_api_key_anda
 ```bash
 node index.js
 ```
+
+### 5. Akses di Browser
+```bash
+http://localhost:3000/
+```
+
+### 6. Akses Endpoint
+| Endpoint             | Url                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| generate text | http://localhost:3000/generate-text |
+| generate from image | http://localhost:3000/generate-from-image |
+| generate from document | http://localhost:3000/generate-from-document |
+| generate from audio | http://localhost:3000/generate-from-audio |
+| chat | http://localhost:3000/api/chat |
