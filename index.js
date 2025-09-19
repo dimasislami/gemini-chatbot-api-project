@@ -66,7 +66,7 @@ app.post('/generate-from-document', upload.single('document'), async (req, res) 
   }
 });
 
-// 3. Endpoint Generate From Audio
+// 4. Endpoint Generate From Audio
 app.post('/generate-from-audio', upload.single('audio'), async (req, res) => {
   try {
     const { prompt } = req.body;
@@ -77,6 +77,25 @@ app.post('/generate-from-audio', upload.single('audio'), async (req, res) => {
         { text: prompt || "Transkrip audio berikut:" },
         { inlineData: { mimeType: req.file.mimetype, data: audioBase64 } }
       ]
+    });
+    res.json({ result: extractText(resp) });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// 5. Endpoint Chat
+app.post('/api/chat', async (req, res) => {
+  try {
+    const { messages } = req.body;
+    if (!Array.isArray(messages)) throw new Error("messages must be an array");
+    const contents = messages.map(msg => ({
+      role: msg.role,
+      parts: [{ text: msg.content }]
+    }));
+    const resp = await ai.models.generateContent({
+      model: GEMINI_MODEL,
+      contents
     });
     res.json({ result: extractText(resp) });
   } catch (err) {
