@@ -25,15 +25,19 @@ Google Gemini melalui API.
 ```bash
 git clone https://github.com/username/gemini-ai-api-project.git
 cd gemini-ai-api-project
+```
 
 ### 2. Install Dependensi
 ```bash
 npm install
+```
 
 ### 3. Konfigurasi Environment
 ```bash
 GEMINI_API_KEY=masukkan_api_key_anda
+```
 
 ### 4. Menjalankan Server
 ```bash
 node index.js
+```
